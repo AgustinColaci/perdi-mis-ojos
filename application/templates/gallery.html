@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">	
+
+		<!--CSS BOOTSTRAP-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+		<!--CSS PROPIO-->
+		<link rel="stylesheet" href="../static/css/styles.css">
+
+		<!--WOW (Animaciones)-->
+		<link rel="stylesheet" href="https://raw.github.com/daneden/animate.css/master/animate.css">
+
+		<!--Animate CSS-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		
+		<title>Perdí mis ojos</title>
+	</head>
+	<body class="body__start">		
+		<header>
+				<div class="container menu__gallery">
+					<!--Audio-->
+					<div class="row">
+						<div class="col">						
+							<audio src="../audio/sonido.wav" controls autoplay loop>
+								<p>Tu navegador no implementa el elemento audio.</p>
+							</audio>
+						</div>
+					</div>					
+					<div class="row">
+						<!--Menu de navegación-->
+						<nav class="navbar navbar-expand-lg navbar-light nav__gallery">
+							  <ul class="navbar-nav">
+								<li class="nav-item">
+								  <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+								  <a class="nav-link" href="#">PROYECTO</a>
+								</li>
+								<li class="nav-item">
+								  <a class="nav-link" href="#">PARTICIPAR</a>
+								</li>
+							  </ul>
+						  </nav>
+					</div>
+				</div>
+		</header>
+        
+	<!-- {% block body %} -->
+	<div class="alineacion__vertical d-block wow animate__animated animate__fadeIn">
+		<div class="container gallery-img">
+			<div class="row repair repair__gallery">
+				<div class="folder__search">
+					<div class="recuadro">
+						<img src="../img/cruz-26.svg" alt="icons">
+                    </div>	
+                    <div class="busca-lo-que-perdiste">	
+                        <h1>Buscá lo que perdiste</h1>
+                        <form class="form__busqueda--img" action="" method="GET">                        
+                            <label for="buscar"></label>
+                            <input class="campo__busqueda" type="search" id="buscar" placeholder="¿Qué había en tu imagen?">
+                        </form>
+                        <input class="boton__buscar" type="submit" value="BUSCAR"></input>
+                    </div>
+				</div>	
+			</div>			
+		<div class="row d-flex justify-content-around text-center">
+			<div class="col">         <!------------------------- EN ESTA SECCION SE DEBEN CARGAR LAS IMÁGENES------------------------->
+			<!-- {% for result in result_row %} -->
+				<!-- {% set location = "pics/" + result.id|string() + "." + result.image_format %}  -->
+			<!-- <img class="gallery-photo" width="auto" height="200" src="{{ url_for('static', filename=location) }}"> -->
+			<img src="https://picsum.photos/200/200" alt="">
+			<img src="https://picsum.photos/200/200" alt="">
+			<img src="https://picsum.photos/200/200" alt="">
+			<img src="https://picsum.photos/200/200" alt="">
+			<img src="https://picsum.photos/200/200" alt="">
+			<img src="https://picsum.photos/200/200" alt="">
+			<img src="https://picsum.photos/200/200" alt="">
+			<img src="https://picsum.photos/200/200" alt="">
+			<img src="https://picsum.photos/200/200" alt="">
+			<img src="https://picsum.photos/200/200" alt="">
+			<!-- {% endfor %} -->
+			</div>
+			<!-- {% endfor %} -->
+		</div>
+		</div>
+		<!-- {% endblock %} -->
+
+		<!-------------BOTON FORMATEAR--------------------->
+
+		<div class="start__formatear wow animate__animated animate__fadeIn">
+			<div class="recuadro">
+				<img src="../img/cruz-26.svg" alt="icons">
+			</div>
+			<div class="contenedor__boton--formatear">
+				<a class="boton__comenzar" href="choose_path.html">FORMATEAR</a>	
+			</div>
+		</div>
+
+	
+
+
+	
+		<!--SCRIPTS BOOTSTRAP-->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>		
+	
+		<!--SCRIPTS WOW-->
+		<script src="../static/js/wow.min.js"></script>
+		<script>
+		new WOW().init();
+		</script>
+
+	</body>
+</html>
